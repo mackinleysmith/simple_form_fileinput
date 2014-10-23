@@ -1,0 +1,10 @@
+.file-in-window {
+  padding: 30px 30px 50px !important;
+  border: 5px dashed #CFCFCF !important;
+  input[type=file] {
+    padding: 30px 30px 50px !important;
+  }
+}
+.file-hovering {
+  box-shadow: inset 0px 0px 10px black !important;
+}
