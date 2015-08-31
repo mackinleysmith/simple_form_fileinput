@@ -1,4 +1,4 @@
-$ ->
+(($)->
   # The plugin code
   $.fn.draghover = (options={})->
     defaults =
@@ -33,3 +33,4 @@ $ ->
         $(@).parent().addClass('file-hovering')
       draghoverend: ->
         $(@).parent().removeClass('file-hovering')
+)(jQuery)
