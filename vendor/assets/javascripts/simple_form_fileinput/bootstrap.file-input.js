@@ -35,10 +35,15 @@
             if (!!$elem.attr('class')) {
                 className = ' ' + $elem.attr('class');
             }
+            // Maybe some fields don't need to be standardized.
+            if (typeof $elem.attr('data-bfi-class') != 'undefined') {
+              className += ' ' + $elem.data('bfi-class');
+            }
+            if (className.length == 0) className = 'btn-default';
 
             // Now we're going to wrap that input field with a Bootstrap button.
             // The input will actually still be there, it will just be float above and transparent (done with the CSS).
-            $elem.wrap('<a class="file-input-wrapper btn btn-default ' + className + '"></a>').parent().prepend($('<span></span>').html(buttonWord));
+            $elem.wrap('<a class="file-input-wrapper btn ' + className + '"></a>').parent().prepend($('<span></span>').html(buttonWord));
         })
 
             // After we have found all of the file inputs let's apply a listener for tracking the mouse movement.
